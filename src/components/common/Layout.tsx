@@ -8,15 +8,9 @@ interface ILayoutProps {
 
 export default function Layout({ children }: ILayoutProps) {
   return (
-    <div className={'flex flex-col items-center'}>
+    <div className={'flex flex-col items-center min-h-screen'}>
       <Header />
-      <main
-        className={
-          'lg:w-[1260px] min-h-[calc(100vh-160px)] justify-center flex'
-        }
-      >
-        {children}
-      </main>
+      <main className={'justify-center flex flex-1'}>{children}</main>
       <Footer />
     </div>
   )
