@@ -15,7 +15,7 @@ export default function IconGroups() {
   return (
     <div className={'min-w-[120px] flex justify-between mt-5'}>
       {profile.map((item) => (
-        <EachIcon item={item} />
+        <EachIcon key={item.name} item={item} />
       ))}
     </div>
   )
