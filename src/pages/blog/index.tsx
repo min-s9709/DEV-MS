@@ -3,8 +3,9 @@ import Layout from '../../components/common/Layout'
 import Seo from '../../components/seo/Seo'
 import Banner from '../../components/blog/Banner'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
 import useSearchParams from '../../hooks/useSearchParams'
+import CategoryHeader from '../../components/blog/category/CategoryHeader'
+import Categories from '../../components/blog/category/Categories'
 
 export default function Blog() {
   const { category } = useSearchParams()
@@ -16,50 +17,10 @@ export default function Blog() {
 
         <div className={'w-4/6 mt-9'}>
           {/* 카테고리 */}
-          <div className={'w-full border-b-[1px] p-2'}>
-            <div className={'flex justify-center'}>
-              <h1 className={'text-size-big-title mr-4'}>All </h1>
-              <h1 className={'text-size-big-title text-[#DA0909]'}>8</h1>
-            </div>
-          </div>
+          <CategoryHeader category={category} />
 
           <div className={'w-full flex justify-start py-4 overflow-x-scroll'}>
-            <div
-              className={'w-fit mr-3 bg-c-green-color text-center rounded-xl'}
-            >
-              <h3 className={'px-2 py-1 text-c-light-color text-base'}>All</h3>
-            </div>
-            <Link to={`?category=Javascript`}>
-              <div
-                className={'w-fit mr-3 bg-c-light-color text-center rounded-xl'}
-              >
-                <h3 className={'px-2 py-1 text-c-green-color text-base'}>
-                  Javascript
-                </h3>
-              </div>
-            </Link>
-
-            {/* <div
-              className={'w-fit mr-3 bg-c-light-color text-center rounded-xl'}
-            >
-              <h3 className={'px-2 py-1 text-c-green-color text-base'}>
-                React
-              </h3>
-            </div>
-            <div
-              className={'w-fit mr-3 bg-c-light-color text-center rounded-xl'}
-            >
-              <h3 className={'px-2 py-1 text-c-green-color text-base'}>
-                Typescript
-              </h3>
-            </div>
-            <div
-              className={'w-fit mr-3 bg-c-light-color text-center rounded-xl'}
-            >
-              <h3 className={'px-2 py-1 text-c-green-color text-base'}>
-                Next.js
-              </h3>
-            </div> */}
+            <Categories category={category} />
           </div>
 
           {/*블로그 포스트 카드 리스트*/}
