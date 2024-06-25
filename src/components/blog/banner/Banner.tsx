@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <div className={'relative w-full h-80'}>
       <StaticImage
-        src='../../images/blogBanner.jpg'
+        src='../../../images/blogBanner.jpg'
         alt='blog-banner'
         className={'object-cover w-full h-full opacity-90'}
       ></StaticImage>
