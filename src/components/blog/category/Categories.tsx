@@ -12,9 +12,8 @@ export default function Categories({ category }: ICategories) {
       }
     }
   `)
-  console.log(data)
   return (
-    <>
+    <div className={'w-full flex justify-start py-4 overflow-x-scroll'}>
       {category ? (
         <Link to={'?category='}>
           <div className={'w-fit mr-3 bg-c-light-color text-center rounded-xl'}>
@@ -42,6 +41,6 @@ export default function Categories({ category }: ICategories) {
           </div>
         </Link>
       ))}
-    </>
+    </div>
   )
 }
