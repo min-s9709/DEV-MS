@@ -12,20 +12,19 @@ import { IPost } from '../../types'
 export default function Blog({ data }: PageProps<Queries.PostListQuery>) {
   const { category } = useSearchParams()
   const allPosts = data.allMdx.nodes as readonly IPost[]
-
-  const posts: IPost[] = category
-    ? (allPosts.filter(
-        (post) => post.frontmatter?.category === category,
-      ) as IPost[])
-    : (allPosts as IPost[])
-
+  const posts: IPost[] =
+    category === 'All' || category === undefined
+      ? (allPosts as IPost[])
+      : (allPosts.filter(
+          (post) => post.frontmatter?.category === category,
+        ) as IPost[])
   return (
     <Layout>
       <div className={'flex flex-col items-center'}>
         <Banner />
         <div className={'w-4/6 mt-9'}>
           <CategoryHeader count={posts.length} category={category} />
-          <Categories category={category} />
+          <Categories category={category || 'All'} />
           <PostsList posts={posts} />
         </div>
       </div>
