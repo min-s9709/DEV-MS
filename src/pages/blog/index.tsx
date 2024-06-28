@@ -22,7 +22,7 @@ export default function Blog({ data }: PageProps<Queries.PostListQuery>) {
     <Layout>
       <div className={'flex flex-col items-center'}>
         <Banner />
-        <div className={'w-4/6 mt-9'}>
+        <div className={'w-4/6 mt-9 min-h-screen'}>
           <CategoryHeader count={posts.length} category={category} />
           <Categories category={category || 'All'} />
           <PostsList posts={posts} />
