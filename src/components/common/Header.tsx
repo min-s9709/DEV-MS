@@ -1,5 +1,6 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
+import { Link } from 'gatsby'
 
 export default function Header() {
   return (
@@ -10,7 +11,9 @@ export default function Header() {
     >
       <div className={'w-[1260px] flex'}>
         <div className={'flex w-3/4 items-center pl-2'}>
-          <h1 className={'text-2xl font-bold'}>DEV.MS</h1>
+          <Link to='/'>
+            <h1 className={'text-2xl font-bold'}>DEV.MS</h1>
+          </Link>
         </div>
         <div className={'flex w-1/4 justify-end'}>
           <div
