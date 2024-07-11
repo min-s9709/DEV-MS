@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       className={
-        'bottom-0 w-full h-24 border-t-2 flex items-center justify-center'
+        'bottom-0 w-full h-14 border-t-2 flex items-center justify-center'
       }
     >
       <div className={'w-[1260px] flex items-center'}>
