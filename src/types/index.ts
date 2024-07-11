@@ -5,6 +5,7 @@ export interface IPost {
     title: string
     date: string
     category: string
+    slug: string
     headerImg?: {
       childImageSharp: {
         gatsbyImageData: IGatsbyImageData
