@@ -9,11 +9,13 @@ const profile = [
     icon: 'material-symbols:mail-outline',
   },
   { name: 'Blog', path: '/blog', icon: 'gridicons:posts' },
+  { name: 'Resume', path: '/', icon: 'ph:user' },
+  { name: 'Portfolio', path: '/', icon: 'bytesize:portfolio' },
 ]
 
 export default function IconGroups() {
   return (
-    <div className={'min-w-[120px] flex justify-between mt-5'}>
+    <div className={'w-fit flex gap-2 justify-between mt-5'}>
       {profile.map((item) => (
         <EachIcon key={item.name} item={item} />
       ))}
