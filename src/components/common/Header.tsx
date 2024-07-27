@@ -1,8 +1,11 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
 import { Link } from 'gatsby'
+import MenutabList from './MenuTabList'
+import useMenuTabs from '../../hooks/useMenuTabs'
 
 export default function Header() {
+  const { isMenuOpen, handleMenuClick, menuRef } = useMenuTabs()
   return (
     <header
       className={
@@ -21,7 +24,18 @@ export default function Header() {
               'flex w-32 justfiy-end border-l-2 justify-around items-center'
             }
           >
-            <Icon icon='mdi:github' className={'w-6 h-6'} />
+            <div ref={menuRef} className={'relative'}>
+              <div
+                className={
+                  'w-6 h-6 hover:bg-[#EEEFF1] hover:rounded-full cursor-pointer'
+                }
+                onClick={handleMenuClick}
+              >
+                <Icon icon='mingcute:menu-line' className={'w-6 h-6'} />
+              </div>
+              {isMenuOpen && <MenutabList />}
+            </div>
+
             <Icon
               icon='material-symbols:dark-mode-outline'
               className={'w-6 h-6'}
