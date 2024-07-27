@@ -10,7 +10,7 @@ interface IPostCard {
 export default function PostCard({ post }: IPostCard) {
   return (
     <Link to={`${post.frontmatter.slug}`} className={'w-full'}>
-      <div className={'w-full h-44 flex mb-2 border-b-[1px] p-2'}>
+      <div className={'w-full h-44 flex mb-2 border-b-[1px] p-2 pb-5'}>
         <div className={'flex flex-col w-3/4 h-full justify-between'}>
           <h1 className={'font-bold text-size-big-title'}>
             {post.frontmatter.title}
