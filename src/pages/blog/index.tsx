@@ -20,7 +20,7 @@ export default function Blog({ data }: PageProps<Queries.PostListQuery>) {
         ) as IPost[])
   return (
     <Layout>
-      <div className={'flex flex-col items-center'}>
+      <div className={'flex flex-col items-center pb-9'}>
         <Banner />
         <div className={'w-4/6 mt-9 min-h-screen'}>
           <CategoryHeader count={posts.length} category={category} />
