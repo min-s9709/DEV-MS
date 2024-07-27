@@ -14,7 +14,7 @@ export default function ProfileCard() {
       </div>
       <div className={'flex flex-col items-center w-3/4 p-2'}>
         <h1 className={'text-size-big-title font-bold'}>
-          💻 안녕하세요. FE 개발자를 꿈꾸는 김민성 입니다.
+          💻 안녕하세요 FE 개발자 김민성 입니다.
         </h1>
         <div className={'flex flex-col items-center mt-5'}>
           <p
