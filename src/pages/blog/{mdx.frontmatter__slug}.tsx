@@ -5,6 +5,7 @@ import Layout from '../../components/common/Layout'
 import MarkDownProvider from '../../components/blog/post/MarkDownProvider'
 import PostHeader from '../../components/blog/post/PostHeader'
 import PostNavigator from '../../components/blog/post/PostNavigator'
+import PostProfile from '../../components/blog/post/PostProfile'
 
 interface IPostDetail {
   data: Queries.PostDetailQuery
@@ -50,6 +51,7 @@ export default function PostDetail({ data, children }: IPostDetail) {
           category={post?.frontmatter?.category || 'untitled'}
         />
         <MarkDownProvider>{children}</MarkDownProvider>
+        <PostProfile />
         <PostNavigator previous={previous} next={next} />
       </div>
     </Layout>
