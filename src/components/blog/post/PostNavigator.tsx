@@ -17,7 +17,7 @@ interface IPostNavigator {
 }
 export default function PostNavigator({ previous, next }: IPostNavigator) {
   return (
-    <div className={'grid grid-cols-2 gap-3 w-full'}>
+    <div className={'grid grid-cols-2 gap-3 w-full pb-9'}>
       <div className={'w-full mr-auto'}>
         {previous && (
           <Link
