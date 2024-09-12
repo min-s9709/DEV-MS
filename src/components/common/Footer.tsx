@@ -1,18 +1,12 @@
 import React from 'react'
-import { Icon } from '@iconify/react'
 
 export default function Footer() {
   return (
-    <footer
-      className={
-        'bottom-0 w-full h-14 border-t-2 flex items-center justify-center'
-      }
-    >
-      <div className={'w-[1260px] flex items-center'}>
-        <p className={'text-dark-gray-color pl-2'}>
+    <footer className='flex items-center justify-center w-full bg-gray-100 h-14'>
+      <div className='w-4/5 text-center'>
+        <p className='text-dark-gray-color'>
           Copyright © @min-s9709. All rights reserved.
         </p>
-        <Icon icon='mdi:github' className={'w-6 h-6'} />
       </div>
     </footer>
   )

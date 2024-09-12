@@ -51,7 +51,7 @@ export default function MarkDownProvider({
   children: React.JSX.Element
 }) {
   return (
-    <div className={'w-full border-b-[1px] pb-5 mb-10'}>
+    <div className={'w-full border-b-[1px] pb-5 mb-10 flex flex-col gap-4'}>
       <MDXProvider components={components}>{children}</MDXProvider>
     </div>
   )
