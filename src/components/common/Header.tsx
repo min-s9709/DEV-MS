@@ -31,7 +31,11 @@ export default function Header() {
                 }
                 onClick={handleMenuClick}
               >
-                <Icon icon='mingcute:menu-line' className={'w-6 h-6'} />
+                {isMenuOpen ? (
+                  <Icon icon='mingcute:close-line' className={'w-6 h-6'} />
+                ) : (
+                  <Icon icon='mingcute:menu-line' className={'w-6 h-6'} />
+                )}
               </div>
               {isMenuOpen && <MenutabList />}
             </div>
