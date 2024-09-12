@@ -15,7 +15,7 @@ const profile = [
 
 export default function IconGroups() {
   return (
-    <div className={'w-fit flex gap-2 justify-between mt-5'}>
+    <div className={'w-fit flex gap-2 justify-between'}>
       {profile.map((item) => (
         <EachIcon key={item.name} item={item} />
       ))}
