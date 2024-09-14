@@ -23,7 +23,7 @@ export default function ProfileCard() {
           alt='profile'
           className='w-40 h-40 rounded-full'
         />
-        <div className='mr-3 text-center w-fit bg-c-green-color rounded-xl'>
+        <div className='text-center w-fit bg-c-green-color rounded-xl'>
           <h3 className='px-2 py-1 text-base font-bold text-c-light-color'>
             @ 김민성
           </h3>

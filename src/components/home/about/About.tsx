@@ -3,6 +3,8 @@ import React from 'react'
 import Title from '../../common/Title'
 import Tag from '../../common/Tag'
 import Navbutton from '../../common/Navbutton'
+import { aboutData } from '../../../data/introduce'
+import Introduce from './Introduce'
 
 export default function About() {
   return (
@@ -16,39 +18,20 @@ export default function About() {
             className='rounded-full w-60 h-60'
           />
           <div className='flex gap-5'>
-            <Tag size='big' name='#김민성' />
-            <Tag size='big' name='#프론트엔드' />
-            <Tag size='big' name='#소통' />
+            {aboutData.tag.map((name, index) => (
+              <Tag key={index} size='big' name={name} />
+            ))}
           </div>
           <Navbutton destination='/resume' content='이력서 보러가기' />
         </div>
         <div className='flex flex-col gap-2 max-lg:mt-8'>
-          <div className='flex flex-col gap-3 p-4 bg-c-green-color rounded-xl'>
-            <h3 className='text-base font-bold text-white'>
-              어떠한 내용이 들어갈까
-            </h3>
-            <p className='text-white text-[14px] leading-relaxed'>
-              웹 디자이너로 활동하며 사용자 중심 디자인, 협업, 프론트엔드 기초
-              지식을 쌓았습니다. 사용자와의 소통에 대해 중요성을 인지하고, 더
-              밀접하게 상호작용 가능한 프로젝트를 개발하고자 프론트엔드 개발자로
-              전향을 결심하게 되었습니다. React, Styled Components, Redux
-              Toolkit 등 다양한 프레임워크와 라이브러리를 도입해 발전할 수 있는
-              새로운 도전에 나서고 있습니다.
-            </p>
-          </div>
-          <div className='flex flex-col gap-3 p-4 bg-c-green-color rounded-xl'>
-            <h3 className='text-base font-semibold text-white'>
-              어떠한 내용이 들어갈까
-            </h3>
-            <p className='text-white text-[14px] leading-relaxed'>
-              웹 디자이너로 활동하며 사용자 중심 디자인, 협업, 프론트엔드 기초
-              지식을 쌓았습니다. 사용자와의 소통에 대해 중요성을 인지하고, 더
-              밀접하게 상호작용 가능한 프로젝트를 개발하고자 프론트엔드 개발자로
-              전향을 결심하게 되었습니다. React, Styled Components, Redux
-              Toolkit 등 다양한 프레임워크와 라이브러리를 도입해 발전할 수 있는
-              새로운 도전에 나서고 있습니다.
-            </p>
-          </div>
+          {aboutData.introduce.map((item, index) => (
+            <Introduce
+              key={index}
+              question={item.question}
+              answer={item.answer}
+            />
+          ))}
         </div>
       </div>
       <div className='flex flex-col gap-6 mt-6'>
